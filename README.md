@@ -1,2 +1,3 @@
 # Innovation
-My personal blog and library.
+Personal Blog.
+Powered by Hexo with ParticleX (Theme)
