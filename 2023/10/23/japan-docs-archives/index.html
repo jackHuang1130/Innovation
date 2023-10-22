@@ -3,7 +3,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
-    <title>「😌」科技時代下的迷茫 | 心情隨筆</title>
+    <title>2023中旬日本行檔案連結永久留存串 | 心情隨筆</title>
     <meta name="author" content="黃禎頡" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -32,6 +32,9 @@
 
 <script src="/js/lib/preview.js"></script>
 
+
+<script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
 
 
 
@@ -150,69 +153,51 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>「😌」科技時代下的迷茫</h1>
+        <h1>2023中旬日本行檔案連結永久留存串</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/10/12
+            2023/10/23
         </span>
         
         <span class="category">
-            <a href="/categories/%E5%BF%83%E6%83%85%E9%9A%A8%E7%AD%86/">
+            <a href="/categories/%E5%82%99%E4%BB%BD/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                心情隨筆
+                備份
             </a>
         </span>
         
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/%E9%95%B7%E6%96%87/" style="color: #00bcd4">長文</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/%E6%83%B3%E6%B3%95/" style="color: #03a9f4">想法</a>
-            </span>
-            
-        </span>
         
 
         <span class="counts">
             <i class="fa-solid fa-pen fa-fw"></i>
             
-                421 字
+                386 字
             
 
         </span>
 
     </div>
     
-    <div class="content" v-pre>
-        <h4 id="「😌」"><a href="#「😌」" class="headerlink" title="「😌」"></a>「😌」</h4><p>致：在科技進步最前線的我們</p>
-<p>2000年左右出生的世代，<br>被稱做「E世代」。</p>
-<p>2023年的今天，<br>目睹無數科技指數成長，<br>眺望人工智能飛速進展。</p>
-<p>從 ChatGPT 到 StableDiffusion，<br>所謂人工智慧不再是幾年前眾人揶揄的 – 「人工智障」，<br>現在的它樣樣都行。</p>
-<p>談話、繪畫、通話，<br>製表、分析、編輯，<br>統整、安排、規劃，<br>過往需要人工的工作，<br>它開始趕上人的品質，<br>–甚至開始逐步超越。</p>
-<p>或許我們應該畏懼將來，<br>或許好不容易考上大學，<br>費盡千辛而學成的專業，<br>最終領到畢業證書那刻…<br>阿。我被ＡＩ取代了。</p>
-<p>我們是第一批享受著前端科技帶來的便利，<br>也是第一批準備迎接前端科技所帶來的衝擊者。<br>或許有人說台灣不會那麼快就有進展，不瞞你說，<br>政府已經開始規劃數台大型計算機設備 – 「台灣杉」。</p>
-<p>ＡＩ發展的難點在於「訓練」，<br>當一個模型在長時間訓練成功後，<br>可以用很少量的資源在客戶端運行，<br>因此，只要前期投入大量的運算資源，<br>以及研發方向正確，<br>那該公司就成功了。</p>
-<p>那在這裡，我想來打打字，<br>發表一些，國內議題看法。<br>或者多少挾帶些生活瑣事？</p>
-<p>魚說：「原神，啟動！」<br>啵啵啵！🫧🫧<br>被切成生魚片了。</p>
-<p>2023&#x2F;09&#x2F;08 @ 苗栗</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，請輸入密碼。"
+        data-encrypted="U2FsdGVkX18gb7+n/IVgqzt1BBVgI2CmHDgsdEMbhWkkEaxfvYcKQt0IBlGm+IMlcPiCpGdeo102qScomKkL3YWmZQUuFviVfvEgSwcb9cuF9XMYcaaKXVGSMSyw+8jvHAPTQKdzAcpphJloZtBUdNTG+Rm11rIxmZ8lyhnoOdP5RlvPiZZdMPMDMuThdiwm6EVGkV37mJ80X7R9c+aa3U2pq6ewbKV7XtRe7bZ3YAu8RMehLCB/YfdIur2p/P/7WDJ4pe6m+Cayl+lNqvsTdjxg51sUGco4br+ylm31YnxO/tZwlscluKFdF7FbukLmYIOF1o9/AHfyofh9O/UGpi+DD5DiKf8l5eekFdausoXuZLd/gNqgBkawnY0yzjkpTc9XMgOBhvOIEbwN3zuwfY6TqPwgB5LHIhVIHcp4dz4p2PDG/PbQ7Fld9kkHe1PklOnvZFKblSwe+ZhGUOCkk4RLe9tz+zSFKhFYJGT4qLH+AhkhalP8OwPJ8GR91aw7joXKTiHm8Z4ocB20gGt6+CcBxQykhvMatM5CyFHB2iQnK60lEIoRwVi/C1gqrIBygxOcnZ67rEAHmMVDtyn30HLaULfhnyT8ptqIV0AvY40e4DYEi22yVcWOdZk6cI8kD2P/Ef2CSKoztSNTwnw8RjIUXexrKj0nstliVVgBK0SG00YXM/OlmS9jIZ3iKRR8Qk/kxGHFND4hfz/FRwIf974joFG1dDoGIEKvpNH51VeypjtzffMKY2Zkgi6ClDxXHbj6Z4SKs5uAo+tpAIyLv7SYRln/l5gpUmZPQQoIazT9FDa6PBN6vgCgaN6lMK2rAEvRgllIndPrZemCmRRhBEfSFRV3aPVN4gctCcAFapHKaAZgb4u3jnrk5Br504yN3kednyDWOgDBMyFI7lqlFXe0pmwxgbi39p34YOCC5alAVt6GIOKQDdWJSt6vA+kAu0CKNYCOgQ6Y/P5SB7tBuwqQMFFwMKx6V6B1WYVIZAVvm8d1LRBuFW4SCRn2Ox8x/mtre/7vbFcKFTtlWAYy1RlROMVxGmUwM3sTBRsNwvRufxQwOlM3kFGFDeNDK/eXADV1xd8nQeP/qTpUvi5MZZQnbdUzex4zWP37EjWpImHpgqzUqk/pkvUZkjCsFLRdXr0uqvNC4Qcq9vAVAE+0/Lk9qhgMlOjbMjsjukXk2qW4tol5gqCBgoL8mYPAItbqkyfj6P9d4uCdqqCB8dHqj6EMNuJWiXS3pI3oXGpmbggm5H10Y0Zj5L5FMlYBU9pJYr5f3dAY6mvd2DwuMywu8wd/CtTickyQXOt/LZmMrfhyrBAySR58md7Gee5gfRaEQH7UJGAK75G3bW4PhFt2DdBCfwipWsaVLd8HRtDbzC/HWWB4EktPIUNc0dTZNA8DbnYPKfXD10+SxDOZOqLkBRHZuU1C1pq7kIUmEqyPU5EM+wesrpzzFIKdLL8ZKRA5jvN53RB81FXrRwghltA8QpLelCdSf54RgBwzy3ea67R6QvwXKYJ5HvshAUREFX50gDXP8ni2ilT1D1mFPk2wolz7MmeXc3XcpGLULPMPDEGKwS7DjDS30lePOa9lRN4VzXr2VvrmRM0pTuE3wPF1mLtmOEPVmz7jglfzv6S2FGkc+7LyDBpbpWk+kj+TY0rKQKfn3cMlB6UYIViAF1GfgKOhNUv9wMPu+KCAkjwYSD6zFLFocinPiV9dEYK/Onxd0HpUpvUypnCSDUEwAYMvAW/1aydD4u1Jb3BGrTvr+HzYswKLQJJvYIP3g0fnn80v76J7HL/bjlDTFCt3wxiNN6Y9lcmsxERyp5FAcSX7hpkaheUA+VMqOVNqyNHnW3U1IUkyegUJnL2bNHHc7VDu6iS/5wcZYTqndp7WStBMLeTnD+03OdJM1xfiRcb3326SKR0oPTohOXo6pRDTTgfvO8ErPFtebEPs366l93iAgQvb7KGX0IrvZLx1H6Y2kLL6"
+        data-shasum="06bc7f6542012fc1085e37caf95d627e6aecf9d267eaacc246866f4aac3a35d9"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     

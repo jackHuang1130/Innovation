@@ -33,6 +33,9 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
 
 
 
@@ -194,16 +197,20 @@
 
     </div>
     
-    <div class="content" v-pre>
-        <h4 id="英文到底怎麼讀"><a href="#英文到底怎麼讀" class="headerlink" title="英文到底怎麼讀"></a>英文到底怎麼讀</h4><p>對於學測向，那讀英文的方式就是背單字，沒了。<br>就學測而言，所有題目都可以用大批大批的單字去壓制，</p>
-<p>舉例而言，文意選填。<br>當你的單字量夠大，你甚至可以不用管詞性 V &#x2F; N &#x2F; ADJ &#x2F; ADV，<br>他會從主要轉輔助角，成為二次判斷的依據，進而更加肯定選擇的選項。</p>
-<p>文意選填寫完後接下來就是大片大片的閱讀題，<br>這裡就是看讀文的速度了，先看題目，後看文章，<br>拚速度讀完後再看題目 (讀文中劃一些題目提到的東西，不畫也沒差等等再找。)</p>
-<p>這裡可以注意到的是文法其實考得不多，<br>學測題本而言就是考大量的單字，<br>所以總之這個階段就是背單字。</p>
-<p>文法會更在後半段的作文中更有用處一點，<br>Not only but also倒裝、there’s no denying…、To such a phenomenon, …，<br>這類的用一下感覺就很厲害，同時作文的架構也出來了，<br>再加上一些背的單字，頁數寫過半，通常分數不會太低。</p>
-<p>英文均標 ~60、前標~70、頂標~80<br>說實在要均標不難，trust me。<br>有均標就很多學校可以個申了。</p>
-<p>對於模擬考而言，個人認為5000單的字彙量很夠用。</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，請輸入密碼。"
+        data-encrypted="U2FsdGVkX1+w/u7j7BhsY5HnAYVbF3tbSrUs0aD3fQuMPdTmyui2N3bd66NWlrgHRhWfXLfj/EaKHhdvwGWzpQOYcqAvT0NB7IW7h5ZbZD/34+gOlWmyA/auD4lOOcoQs9JURTB+86WPaTDW9Kl7ssgLIMj8AXS5dnzlMGPz1Mb/q8hkj+Y75iiyBB1GiWwMlx6zYSdHsITOkRoGhkqqjoDEEnCeLjmzfwO33qvChQ6fC8Su/nkHRvvkDxL1qcGEGW3KO+eyQa2uk/elRlWPXpOj0e71KnJWL0LsvAF9DNEqCmD/dPa4VFWugHm3rXHoJdWGKPyjY6BiIDYlw9Xm05lT1eCEm+20asmJNREHVflc3XcBOXP1fA7luVH7zGRcVYssnAfSb2XMgKHyNs2+eYvTGonWai5Izhvxbvrj+V09U0OeFBDAAgwoXQwvQZAxLXmmhVywbAy6zSshrVJJQQpt0KCbX/H9aqIEBw/Kb0oMkG1y0d904RzPeErgBkgqHGrJLAkKIJ/Oft4MPE7niGyFZwI919LhObjOmnH7NSjL2yo/LoQgXHT6H9H9CsHo/8xQVabaLrLJXRjX4KulRofCS+/n/PZyrrTtdJaYIhreQ+zQnCf+DKFI76kSZ61/nbR+HiZOc4CY0zSPDvwL0lx4xRLQxv6UOI9LJKLRCeAceL60+hL8zQa4LtsX7vC3eHCFdvtiSQhm/2Xpf1X9sdaLu4pYHY0mclR2nvJeGZj5MZ89nYKbw3K3Jp5+eJqgpM33da/n/4vkOhEEiyzz6WJLH573U+hIFrusX1pOixvLABeQoUbSV+ST18diAasZxe3Uhq2qHWkgT66OcrUe3FQozt4i0X8dtv5mIuM+oNYBENTJjI9CsWvf7syx9nFxIQAzi7bIR6evWBphWdVZyvRJsbtBu1uO/VAyMG6dP5IjkRDP36+NYQLJDn82UWhhCv+SKehJN3i72qpgs/RrL0n75rJxyeQEMSbvS9hQjYQbPdUz0FWHRdnIpSm0mu+pnGw+xH12hnvXIP3GiTV44Vx05/qepUEg7gXMsweOlgMLYg+A26cHOPdFGca3gqGZspkllg1XKCWBCmieCvGaVZflZbKkglrjwaX4/YKVBZjBD5ggjPjhgUbSEs9A8MePDohvIGkpZFqEURBBMTHqACEWm9MdN3RiCtCvXdfKdhg5GI8ZAotvvGL8SkXGXo9fbLzsYwBLywjEr3sJoPwXQtYbQ9evYRHMMs+JmMkaM5/7VB9NsxBxYz6tMX/fcHKwBCK46exKOOaqppOZqqfsbRFYYm/5+SuPJCl88PCIefguQr/q+hXELB2uVL2sNCGwdlyv0jy0WKFkExaxXlwzHnZXqxWHqT3pywq5pQH9ZgiDnoBdbcWd2UZcuAFo9kAIi/6bxl+U6YrRJnNKitmtuwHRZ/D14vYrLPiMU977YrpAA+Bowdymg5aD3hXLCGcWKsFJ59dz2h3PsUGmSwRdshZt7pIcfQfP5iSBw+9UWXeVscabJAtBUubrzfuh2HU0NdBGAUUEH4AsExaABSVOuMkcmMkjph6jU/6fJCdEbLApZaRks6Gr61zBqf2+ct3K78I+s9U9sbnpTppqtCgztPHkFseGWq6KQ8wi+ohPJab/lYOgwdWAWaj0XkaShapkJUacME8cjdpAzOo1aI+bTriP+ykY9OgKDZbg/4X8xIsPVixf+pd2564hkMrUq/GuRuF2PI+Dc6+BGNQXJnnN3cG6u460mkFb21jRfJkzgl51xAbLPdbHh26KVXed2uBRj20VXQ5brMUvibkEhXhnH//UowD/3H0H8yFVItUAQWi4KMiLN4RiYFbB+e3awpfZgG9Z9Q7wbHGcvSu7r1cGZSsIBVfLxCOo92kuRXoRMQuem6KS5hZcWfAF6s4Qe6wFGc/LTg+4QTd0TCIS51UmL4dVykpYUJjYDk7bH2rk41rQfAiwIBZtTQLOQcJdh6dp"
+        data-shasum="3868840eab09f3d5a21151f6ba56978d4418e215ae69bca2b744c75b65c0bb70"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
