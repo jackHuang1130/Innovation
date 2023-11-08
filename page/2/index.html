@@ -3,7 +3,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8" />
-    <title>中學生閱讀心得比賽 - (投稿) | 心情隨筆</title>
+    <title>心情隨筆</title>
     <meta name="author" content="黃禎頡" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -36,9 +36,7 @@
 
 
 
-
-
-
+<script src="/js/lib/home.js"></script>
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -148,80 +146,152 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>中學生閱讀心得比賽 - (投稿)</h1>
+            <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="/images/introJPG.jpg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>心情隨筆</h1>
+                <h3>備份所有我寫的文章、日誌</h3>
+                <h5></h5>
+            </div>
+        </span>
     </div>
-    <div class="info">
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2023/10/12/post1/">
+        <h2 class="post-title">「😌」科技時代下的迷茫</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%BF%83%E6%83%85%E9%9A%A8%E7%AD%86/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                心情隨筆
+            </a>
+        </span>
+        
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/10/15
-        </span>
-        
-        <span class="category">
-            <a href="/categories/%E8%80%83%E8%A9%A6/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                考試
-            </a>
+            2023/10/12
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/%E4%BD%9C%E6%96%87/" style="color: #ff7d73">作文</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/%E4%B8%AD%E6%96%87%E4%BD%9C%E6%96%87/" style="color: #00bcd4">中文作文</a>
-            </span>
-            
-        </span>
-        
-
-        <span class="counts">
+        <span class="special">
             <i class="fa-solid fa-pen fa-fw"></i>
             
-                1345 字
+                421 字
             
 
         </span>
+        
+
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <center>一段關於未來感到迷茫的談話。</center>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%95%B7%E6%96%87/" style="color: #ff7d73">長文</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%83%B3%E6%B3%95/" style="color: #00bcd4">想法</a>
+        </span>
+        
+    </div>
+    <a href="/2023/10/12/post1/" class="go-post">閱讀全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    
+    
+    
+</div>
 
     </div>
     
-    <div class="content" v-pre>
-        <h3 id="善的傳遞鍊"><a href="#善的傳遞鍊" class="headerlink" title="善的傳遞鍊"></a>善的傳遞鍊</h3><h4 id="不便利的便利商店"><a href="#不便利的便利商店" class="headerlink" title="不便利的便利商店"></a>不便利的便利商店</h4><h5 id="相關書訊"><a href="#相關書訊" class="headerlink" title="相關書訊"></a>相關書訊</h5><p>《不便利的便利商店》以一名叫「獨孤」的街友撿到廉女士的錢包，揭開了故事的序幕。為了答謝獨孤，廉女士帶他到自己經營的便利店，每天請他吃店裡的便當。後來店裡上大夜班的人辭職了，一時沒辦法招到新員工的廉女士，以戒酒為條件，聘請了這位街友來到便利店上班。以此展開圍繞在便利店的各種故事。</p>
-<h5 id="內容摘錄"><a href="#內容摘錄" class="headerlink" title="內容摘錄"></a>內容摘錄</h5><ol>
-<li>   熱騰騰的罐裝咖啡，彷彿能融化深秋的冷清。 p39</li>
-<li>   學會了換位思考的方法，才懂得抱持憐憫的態度，才開始領悟如何接近人心。P272</li>
-<li>   他說，人生本來就是不斷解決問題，既然都要解決問題，那就努力選還可以的問題來解。P281</li>
-<li>   人生就是關係，關係的根本就是溝通。我發現只要能跟身旁的人交心，幸福其實離我們不遠。P287</li>
-</ol>
-<h5 id="我的觀點"><a href="#我的觀點" class="headerlink" title="我的觀點"></a>我的觀點</h5><p>書中由很多段小故事，圍繞在「獨孤」這位街友而展開。在閱讀各個故事的過程中，此書都在無形中傳遞溫暖的能量給讀者。</p>
-<p>故事中的廉女士，以「回報社會」的心態經營著一間不賺錢、位子不佳、商品或許有些不齊的便利店，就只為了能幫助到一些人。就算外頭的用餐區不斷的被店員抱怨、被鄰里檢舉，仍也為了那些能幫助到的人而不願收掉。在這裡我認為廉女士是一位樂善好施的人，在現今社會中，以老闆而言是一件很罕見的事了。大家為了自己的利益，持續地縮減各種東西，而使得利益得以最大化，而這些被「縮減的東西」往往是「人情味」等會讓人持續回味，失去後感到可惜的事物。</p>
-<p>作為老闆，社會結構中的中上層，我認為應該要在取之社會的同時付諸社會，善盡企業義務的責任，由企業起頭，展開善的傳遞鍊。就如故事中的廉女士，不管能不能賺大錢，就算賠本運營，仍給予最大的關懷給獨孤，給予他一份工作，獲得一份穩定的收入，開始改善自己。而獨孤也沒有辜負這份期盼、這份工作、這份善良，他也在工作的過程中，將這份善心持續的傳遞給到店裡的客人、職場上的同事。</p>
-<p>故事中也提到我覺得很重要的主題「溝通」。人與人之間的交流，不外乎就是通過層層堆疊、交換想法。而要實現溝通，在那之前就要做到「聆聽」。「人類正是因為每個人都是獨立的個體、具有不同的人生、擁有不同的想法，進而產生不同的見解，因此而有趣的。」在溝通的過程中，我們無法得知他人的人生閱歷，因此對方有可能無法理解當下在闡述的內容。或許對方的想法與我們有所不同，最終做出全然不同的決定。我們應該停下一味的直接批評、說教，先停下來聽聽對方為何這樣思考、這樣做，或許更能理解對方的處境，故事中的獨孤，在傳遞善的循環時，便持續的「聆聽」客人的想法，不隨意打斷，在「完整地」了解對方的看法後，才給予實質的建議和關懷，幫助他們解決人生中的難題與困擾。「溝通」建立於「聆聽」，而「聆聽」建立於「耐心」。溝通並非一味的給予意見、說教，更多的是基於耐心的互相交換資訊、交流看法。</p>
-<p>「人生本來就是不斷解決問題，既然都要解決問題，那就努力選擇可以的問題來解。」我非常喜歡書中的這句短語。而人生中圍繞著各種大大小小不同的問題、難關，在程式的圈子有個概念是這麼進行的：「面臨大問題時，先解決眼可見的小問題，最終，最後的大問題將得以迎刃而解。」跳脫程式，這個概念也十分適用於現實世界。當各種問題、困難，擺在眼前，既然都是得被解決的，那不如挑自己當下能處理的，如此一來，便會使的這些困難有所進展，而非在困難之下而有畏懼進而原地踏步。</p>
-<p>人生本來就會不斷面對問題，而我們要持續解決，而「聆聽」、「溝通」、「耐心」是執行這些問題的關鍵。最後，在自己有餘力之時，能夠像故事中的獨孤，開始幫助他人，打開善的循環，能使自己、他人、乃至整個社會產生更好的氛圍。</p>
-<h5 id="討論議題"><a href="#討論議題" class="headerlink" title="討論議題"></a>討論議題</h5><p>能下定決心，成為第一位善人，開啟善的循環嗎？</p>
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avartar.jpg" alt="avatar" />
+        </div>
+        <div class="name">黃禎頡</div>
+        <div class="description">
+            <p>普通的高中生<br>沒什麼專長<br>會點程式而已</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/jackHuang1130">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://instagram.com">
+                    <i
+                        class="fa-brands fa-instagram fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://jack4444.xyz">個人網站</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
 
     </div>
-    
-    
-    
-    
-    
-    
     
 </div>
 
@@ -251,12 +321,6 @@
         
     </div>
     <script src="/js/main.js"></script>
-    
-    
-
-
-
-
     
 </body>
 </html>
